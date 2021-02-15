@@ -39,7 +39,8 @@ const App = () => {
   };
 
   const addFavouriteMovie = (movie) => {
-    const newFavouriteList = [...favourites, movie];
+    // favouritesリストが空なら追加しない
+    const newFavouriteList = favourites ? [...favourites, movie] : [movie];
     setFavourites(newFavouriteList);
     saveToLocalStorage(newFavouriteList);
   };
