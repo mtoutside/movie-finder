@@ -7,6 +7,8 @@ import SearchBox from "./components/SearchBox";
 import AddFavourite from "./components/AddToFavourites";
 import RemoveFavourites from "./components/RemoveFavourites";
 
+import TodoLists from "./components/TodoLists";
+
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [searchValue, setSearchValue] = useState("");
@@ -77,7 +79,10 @@ const App = () => {
           favouriteComponent={RemoveFavourites}
         />
       </div>
+
+      <TodoLists title="titile" desc="desccc" />
     </div>
+
   );
 };
 
